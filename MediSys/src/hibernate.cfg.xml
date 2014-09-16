@@ -15,7 +15,7 @@
 	<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
 <property name="show_sql">true</property>
 		
-		<mapping class="com.medisys.ravi.pojo.PptRegistrationPojo"/>
+		<mapping class="com.medisys.ravi.pojo.LoginMasterPojo"/>
 </session-factory>
 
 </hibernate-configuration>

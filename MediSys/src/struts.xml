@@ -18,10 +18,10 @@
 				
 		</result-types>
 
-<action name="login">
+<action name="login" class="com.medisys.ravi.actions.LoginController" method="LoginUser" >
+<result name="SUCCESS" >success.jsp</result>
 
-
-
+<result name="ERROR" >error.jsp</result>
 </action>
 
 
