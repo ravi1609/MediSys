@@ -13,7 +13,7 @@ private String address_two;
 private String address_three;
 private String gender;
 private String alternate_mobile_no;
-private String 
+private String grp_name;
 
 
 // generate getters and setters of the fields 
