@@ -1,0 +1,32 @@
+@Entity
+@Table(name="MEDI_COUNTRY_MASTER,schema="medisys")
+public class MediCountryMasterPojo implements Serializable
+{
+@Id
+@Column(name="SRNO",nullable=false)
+@Generator(strategy=Generator.SEQUENCE)
+private Integer SRNO;
+@Column(name="COUNTRY_ID",nullable=false,length=5)
+private String COUNTRY_ID;
+@Column(name="RECORD_STATUS",nullable=false,length=1)
+private Integer RECORD_STATUS;
+@Column(name="COUNTRY_DESC",nullable=false,length=150)
+private String COUNTRY_DESC;
+@Column(name="COUNTRY_NAME",nullable=false,length=80)
+private String COUNTRY_NAME;
+@Column(name="CURRENCY_ID",nullable=false,length=4)
+private Integer CURRENCY_ID;
+@Column(name="CREATED_BY",nullable=false,length=20)
+private String CREATED_BY;
+@Column(name="CREATED_ON",nullable=false,length=40)
+private String CREATED_ON;
+@Basic
+@Temporal
+@Column(name="CREATED_DATE",nullable=false)
+private Date CREATED_DATE; 
+
+}
+
+
+
+
