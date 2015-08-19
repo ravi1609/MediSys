@@ -25,6 +25,17 @@ private String CREATED_ON;
 @Column(name="CREATED_DATE",nullable=false)
 private Date CREATED_DATE; 
 
+@Column(name="TZ_SECONDS",length=2,nullable=false)
+private Integer TZ_SECONDS;
+
+@Column(name="TZ_MINUTES",length=2,nullable=false)
+private Integer TZ_MINUTES;
+
+@Column(name="TZ_HOURS",length=2,nullable=false)
+private Integer TZ_HOURS;
+
+
+
 }
 
 
