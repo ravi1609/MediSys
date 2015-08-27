@@ -1,0 +1,122 @@
+package com.medisys.ravi.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+
+@Entity
+@Table(name="MEDI_ROLE_MASTER")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="MEDI_ROLE_MASTER")
+@Audited
+public class MediRoleMasterPojo implements Serializable  {
+
+	
+	/**
+	 * pojo class for the role_master table
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name = "ROLE_ID")
+	private Integer ROLE_ID;
+	@Column(name = "ROLE_CODE")
+	private String ROLE_CODE;
+	@Column(name = "ROLE_DESCRIPTION")
+	private String ROLE_DESCRIPTION;
+	@Column(name = "DISPLAY_ORDER")
+	private Integer DISPLAY_ORDER;
+	@Column(name = "CREATED_BY")
+	private String CREATED_BY;
+	@Column(name = "CREATED_ON")
+	private String CREATED_ON;
+	@Column(name = "CREATED_DATE")
+	private Date CREATED_DATE;
+	@Column(name = "RECORD_STATUS")
+	private Integer RECORD_STATUS;
+	@Column(name = "OFFICE_CODE")
+	private String OFFICE_CODE;
+	@Column(name = "ROLE_NAME")
+	private String ROLE_NAME;
+	@Column(name="DELETE_FLAG")
+	private Integer DELETE_FLAG;
+	
+	//setters and getters
+	
+	
+	public Integer getROLE_ID() {
+		return ROLE_ID;
+	}
+	public Integer getDELETE_FLAG() {
+		return DELETE_FLAG;
+	}
+	public void setDELETE_FLAG(Integer dELETE_FLAG) {
+		DELETE_FLAG = dELETE_FLAG;
+	}
+	public String getROLE_NAME() {
+		return ROLE_NAME;
+	}
+	public void setROLE_NAME(String rOLE_NAME) {
+		ROLE_NAME = rOLE_NAME;
+	}
+	public void setROLE_ID(Integer rOLE_ID) {
+		ROLE_ID = rOLE_ID;
+	}
+	public String getROLE_CODE() {
+		return ROLE_CODE;
+	}
+	public void setROLE_CODE(String rOLE_CODE) {
+		ROLE_CODE = rOLE_CODE;
+	}
+	public String getROLE_DESCRIPTION() {
+		return ROLE_DESCRIPTION;
+	}
+	public void setROLE_DESCRIPTION(String rOLE_DESCRIPTION) {
+		ROLE_DESCRIPTION = rOLE_DESCRIPTION;
+	}
+	public Integer getDISPLAY_ORDER() {
+		return DISPLAY_ORDER;
+	}
+	public void setDISPLAY_ORDER(Integer dISPLAY_ORDER) {
+		DISPLAY_ORDER = dISPLAY_ORDER;
+	}
+	public String getCREATED_BY() {
+		return CREATED_BY;
+	}
+	public void setCREATED_BY(String cREATED_BY) {
+		CREATED_BY = cREATED_BY;
+	}
+	public String getCREATED_ON() {
+		return CREATED_ON;
+	}
+	public void setCREATED_ON(String cREATED_ON) {
+		CREATED_ON = cREATED_ON;
+	}
+	public Date getCREATED_DATE() {
+		return CREATED_DATE;
+	}
+	public void setCREATED_DATE(Date cREATED_DATE) {
+		CREATED_DATE = cREATED_DATE;
+	}
+	public Integer getRECORD_STATUS() {
+		return RECORD_STATUS;
+	}
+	public void setRECORD_STATUS(Integer rECORD_STATUS) {
+		RECORD_STATUS = rECORD_STATUS;
+	}
+	public String getOFFICE_CODE() {
+		return OFFICE_CODE;
+	}
+	public void setOFFICE_CODE(String oFFICE_CODE) {
+		OFFICE_CODE = oFFICE_CODE;
+	}
+	
+
+	
+}
