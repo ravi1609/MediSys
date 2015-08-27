@@ -29,7 +29,7 @@ public class MediMenuMasterPojo implements Serializable {
 	@Column(name="MENU_ID")
 	private Integer MENU_ID;
 	@Column(name="MENU_CODE")
-    private String	MENU_CODE;
+    private Integer	MENU_CODE;
 	@Column(name="MENU_DESCRIPTION")
     private String MENU_DESCRIPTION;
 	@Column(name="ACTION_PATH")
