@@ -1,0 +1,154 @@
+package com.medisys.ravi.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+@Entity
+@Table(name="MEDI_MENU_MASTER")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="MEDI_MENU_MASTER")
+@Audited
+public class MediMenuMasterPojo implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="MENU_ID")
+	private Integer MENU_ID;
+	@Column(name="MENU_CODE")
+    private String	MENU_CODE;
+	@Column(name="MENU_DESCRIPTION")
+    private String MENU_DESCRIPTION;
+	@Column(name="ACTION_PATH")
+	private String	ACTION_PATH;
+	@Column(name="DISPLAY_ORDER")
+	private Integer	DISPLAY_ORDER;
+	@Column(name="CREATED_BY")
+	private String	CREATED_BY;
+	@Column(name="CREATED_ON")
+	private String	CREATED_ON;
+	@Column(name="CREATED_DATE")
+	private Date	CREATED_DATE;
+	@Column(name="RECORD_STATUS")
+	private Integer	RECORD_STATUS;
+	@Column(name="ACTION_PATH_OLD")
+	private String	ACTION_PATH_OLD;
+	@Column(name="SERCATEGORY_ID")
+	private Integer SERCATEGORY_ID;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false )
+	@JoinColumn(name="GROUP_ID")
+	private MediMenuGroupMasterPojo menu_grp_master_pojo;
+	
+	@Column(name="DELETE_FLAG")
+	private Integer DELETE_FLAG;
+	
+	
+	@Column(name="MENU_NAME")
+	private String MENU_NAME;
+	
+	
+	
+	
+	
+	//getters and setters
+	
+	public Integer getMENU_ID() {
+		return MENU_ID;
+	}
+	public String getMENU_NAME() {
+		return MENU_NAME;
+	}
+	public void setMENU_NAME(String mENU_NAME) {
+		MENU_NAME = mENU_NAME;
+	}
+	public Integer getDELETE_FLAG() {
+		return DELETE_FLAG;
+	}
+	public void setDELETE_FLAG(Integer dELETE_FLAG) {
+		DELETE_FLAG = dELETE_FLAG;
+	}
+	public void setMENU_ID(Integer mENU_ID) {
+		MENU_ID = mENU_ID;
+	}
+	public String getMENU_CODE() {
+		return MENU_CODE;
+	}
+	public void setMENU_CODE(String mENU_CODE) {
+		MENU_CODE = mENU_CODE;
+	}
+	public String getMENU_DESCRIPTION() {
+		return MENU_DESCRIPTION;
+	}
+	public void setMENU_DESCRIPTION(String mENU_DESCRIPTION) {
+		MENU_DESCRIPTION = mENU_DESCRIPTION;
+	}
+	public String getACTION_PATH() {
+		return ACTION_PATH;
+	}
+	public void setACTION_PATH(String aCTION_PATH) {
+		ACTION_PATH = aCTION_PATH;
+	}
+	public Integer getDISPLAY_ORDER() {
+		return DISPLAY_ORDER;
+	}
+	public void setDISPLAY_ORDER(Integer dISPLAY_ORDER) {
+		DISPLAY_ORDER = dISPLAY_ORDER;
+	}
+	public String getCREATED_BY() {
+		return CREATED_BY;
+	}
+	public void setCREATED_BY(String cREATED_BY) {
+		CREATED_BY = cREATED_BY;
+	}
+	public String getCREATED_ON() {
+		return CREATED_ON;
+	}
+	public void setCREATED_ON(String cREATED_ON) {
+		CREATED_ON = cREATED_ON;
+	}
+	public Date getCREATED_DATE() {
+		return CREATED_DATE;
+	}
+	public void setCREATED_DATE(Date cREATED_DATE) {
+		CREATED_DATE = cREATED_DATE;
+	}
+	public Integer getRECORD_STATUS() {
+		return RECORD_STATUS;
+	}
+	public void setRECORD_STATUS(Integer rECORD_STATUS) {
+		RECORD_STATUS = rECORD_STATUS;
+	}
+	public String getACTION_PATH_OLD() {
+		return ACTION_PATH_OLD;
+	}
+	public void setACTION_PATH_OLD(String aCTION_PATH_OLD) {
+		ACTION_PATH_OLD = aCTION_PATH_OLD;
+	}
+	public Integer getSERCATEGORY_ID() {
+		return SERCATEGORY_ID;
+	}
+	public void setSERCATEGORY_ID(Integer sERCATEGORY_ID) {
+		SERCATEGORY_ID = sERCATEGORY_ID;
+	}
+	public MediMenuGroupMasterPojo getMenu_grp_master_pojo() {
+		return menu_grp_master_pojo;
+	}
+	public void setMenu_grp_master_pojo(MediMenuGroupMasterPojo menu_grp_master_pojo) {
+		this.menu_grp_master_pojo = menu_grp_master_pojo;
+	}
+	
+
+}
