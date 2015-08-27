@@ -1,0 +1,118 @@
+package com.medisys.ravi.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+@Entity
+@Table(name="MEDI_MENU_GROUP_MASTER")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="MEDI_MENU_GROUP_MASTER")
+@Audited
+public class MediMenuGroupMasterPojo  implements Serializable {
+
+	/**
+	 * 
+	 */
+	
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name = "GROUP_ID")
+	private Integer GROUP_ID;
+	@Column(name = "GROUP_NAME")
+	private String GROUP_NAME;
+	@Column(name = "GROUP_DESCRIPTION")
+	private String GROUP_DESCRIPTION;
+	@Column(name = "DISPLAY_ORDER")
+	private Integer DISPLAY_ORDER;
+	@Column(name = "CREATED_BY")
+	private String CREATED_BY;
+	@Column(name = "CREATED_ON")
+	private String CREATED_ON;
+	@Column(name = "CREATED_DATE")
+	private Date CREATED_DATE;
+	@Column(name = "RECORD_STATUS")
+	private Integer RECORD_STATUS;
+	@Column(name="DELETE_FLAG")
+	private Integer DELETE_FLAG;
+	
+	/*@OneToMany(cascade=CascadeType.ALL , mappedBy="menu_grp_master_pojo")
+	private Set<MediMenuMasterPojo> menu_master_set=new HashSet<MediMenuMasterPojo>();
+	
+	*/
+	//getters and setters 
+	
+	
+public Integer getDELETE_FLAG() {
+		return DELETE_FLAG;
+	}
+	public void setDELETE_FLAG(Integer dELETE_FLAG) {
+		DELETE_FLAG = dELETE_FLAG;
+	}
+/*		public Set<MediMenuMasterPojo> getMenu_master_set() {
+		return menu_master_set;
+	}
+	public void setMenu_master_set(Set<MediMenuMasterPojo> menu_master_set) {
+		this.menu_master_set = menu_master_set;
+	}*/
+	public Integer getGROUP_ID() {
+		return GROUP_ID;
+	}
+	public void setGROUP_ID(Integer gROUP_ID) {
+		GROUP_ID = gROUP_ID;
+	}
+	public String getGROUP_NAME() {
+		return GROUP_NAME;
+	}
+	public void setGROUP_NAME(String gROUP_NAME) {
+		GROUP_NAME = gROUP_NAME;
+	}
+	public String getGROUP_DESCRIPTION() {
+		return GROUP_DESCRIPTION;
+	}
+	public void setGROUP_DESCRIPTION(String gROUP_DESCRIPTION) {
+		GROUP_DESCRIPTION = gROUP_DESCRIPTION;
+	}
+	public Integer getDISPLAY_ORDER() {
+		return DISPLAY_ORDER;
+	}
+	public void setDISPLAY_ORDER(Integer dISPLAY_ORDER) {
+		DISPLAY_ORDER = dISPLAY_ORDER;
+	}
+	public String getCREATED_BY() {
+		return CREATED_BY;
+	}
+	public void setCREATED_BY(String cREATED_BY) {
+		CREATED_BY = cREATED_BY;
+	}
+	public String getCREATED_ON() {
+		return CREATED_ON;
+	}
+	public void setCREATED_ON(String cREATED_ON) {
+		CREATED_ON = cREATED_ON;
+	}
+	public Date getCREATED_DATE() {
+		return CREATED_DATE;
+	}
+	public void setCREATED_DATE(Date cREATED_DATE) {
+		CREATED_DATE = cREATED_DATE;
+	}
+	public Integer getRECORD_STATUS() {
+		return RECORD_STATUS;
+	}
+	public void setRECORD_STATUS(Integer rECORD_STATUS) {
+		RECORD_STATUS = rECORD_STATUS;
+	}
+	
+	
+}
