@@ -7,6 +7,8 @@ public class RoleMenuLinkPojo implements Serialiazable{
 ROLE_MENU_ID
 ROLE_CODE
 MENU_CODE
+
+MENU_ID
 DISPLAY_ORDER
 CREATED_BY
 CREATED_ON
