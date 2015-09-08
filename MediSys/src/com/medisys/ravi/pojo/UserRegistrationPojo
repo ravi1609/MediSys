@@ -1,0 +1,533 @@
+package com.medisys.ravi.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.apache.log4j.Logger;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+@Entity
+@Table(name="APPLICANT_DETAILS")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="APPLICANT_DETAILS")
+@Audited
+public class UserRegistrationPojo implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static Logger logger =Logger.getLogger(UserRegistrationPojo.class);
+
+//fields
+	@Column(name="APP_FIRST_NAME")
+	private String APP_FIRST_NAME;
+	
+	@Column(name="APP_MIDDLE_NAME")
+	private String APP_MIDDLE_NAME;
+	
+	@Column(name="APP_SUR_NAME")
+	private String APP_SUR_NAME;
+	
+	@Id
+	@Column(name="APP_FILE_NO")
+	private String APP_FILE_NO;
+	
+	@Column(name="APP_ADDRESS_ONE")
+	private String APP_ADDRESS_ONE;
+	
+	@Column(name="APP_ADDRESS_TWO")
+	private String APP_ADDRESS_TWO;
+	
+	@Column(name="APP_ADDRESS_THREE")
+	private String APP_ADDRESS_THREE;
+	
+	@Column(name="REFERRED_BY")
+	private String REFERRED_BY;
+	
+	@Column(name="REFERRED_DATE")
+	private Date REFERRED_DATE;
+	
+	@Column(name="REF_DOCTER_NAME")
+	private String REF_DOCTER_NAME;
+	
+	@Column(name="REF_DOCTER_DEGREE")
+	private String REF_DOCTER_DEGREE;
+	
+	@Column(name="REF_DOCTER_HOSPITAL_NAME")
+	private String REF_DOCTER_HOSPITAL_NAME;
+	
+	@Column(name="APP_MOBILE_NO")
+	private String APP_MOBILE_NO;
+	
+	@Column(name="APP_FATHER_NAME")
+	private String APP_FATHER_NAME;
+	
+	@Column(name="APP_MOTHER_NAME")
+	private String APP_MOTHER_NAME;
+	
+	@Column(name="APP_DOB")
+	private Date APP_DOB;
+	
+	@Column(name="REF_HOSPITAL_ADDRESS_ONE")
+	private String REF_HOSPITAL_ADDRESS_ONE;
+	
+	@Column(name="REF_HOSPITAL_ADDRESS_TWO")
+	private String REF_HOSPITAL_ADDRESS_TWO;
+	
+	@Column(name="REF_HOSPITAL_ADDRESS_THREE")
+	private String REF_HOSPITAL_ADDRESS_THREE;
+	
+	@Column(name="REF_DOCTOR_EMP_ID")
+	private String REF_DOCTOR_EMP_ID;
+	
+	@Column(name="REF_HOSPITAL_REGISTRATION_NO")
+	private String REF_HOSPITAL_REGISTRATION_NO;
+	
+	@Column(name="APP_EXISTS_DISEASE_ONE")
+	private String APP_EXISTS_DISEASE_ONE;
+	
+	@Column(name="APP_EXISTS_DISEASE_TWO")
+	private String APP_EXISTS_DISEASE_TWO;
+	
+	@Column(name="APP_EXISTS_DISEASE_THREE")
+	private String APP_EXISTS_DISEASE_THREE;
+	
+	@Column(name="APP_EXISTS_DISEASE_FOUR")
+	private String APP_EXISTS_DISEASE_FOUR;
+	
+	@Column(name="APP_EXISTS_DISEASE_FIVE")
+	private String APP_EXISTS_DISEASE_FIVE;
+	
+	@Column(name="APP_MEDI_TEST_ID_ONE")
+	private String APP_MEDI_TEST_ID_ONE;
+	
+	@Column(name="APP_GIVEN_SAMPLE_ID")
+	private String APP_GIVEN_SAMPLE_ID;
+	
+	@Column(name="APP_MEDI_TEST_ID_TWO")
+	private String APP_MEDI_TEST_ID_TWO;
+	
+	@Column(name="APP_MEDI_TEST_ID_THREE")
+	private String APP_MEDI_TEST_ID_THREE;
+	
+	@Column(name="APP_MEDI_TEST_ID_FOUR")
+	private String APP_MEDI_TEST_ID_FOUR;
+	
+	@Column(name="APP_MEDI_TEST_ID_FIVE")
+	private String APP_MEDI_TEST_ID_FIVE;
+	
+	@Column(name="APP_PRESENT_ADDRESS_ONE")
+	private String APP_PRESENT_ADDRESS_ONE;
+	
+	@Column(name="APP_PRESENT_ADDRESS_TWO")
+	private String APP_PRESENT_ADDRESS_TWO;
+	
+	@Column(name="APP_PRESENT_ADDRESS_THREE")
+	private String APP_PRESENT_ADDRESS_THREE;
+	
+	@Column(name="CREATED_BY")
+	private String CREATED_BY;
+	
+	@Column(name="CREATED_DATE")	
+	private Date CREATED_DATE;
+	
+	@Column(name="CREATED_ON")
+	private String CREATED_ON;
+	
+	@Column(name="COUNTRY_ID")
+	private String COUNTRY_ID;
+	
+	@Column(name="APP_SERVICE_ID_ONE")
+	private Integer APP_SERVICE_ID_ONE;
+	
+	@Column(name="APP_SERVICE_ID_TWO")
+	private Integer APP_SERVICE_ID_TWO;
+	
+	@Column(name="APP_SERVICE_FEE_ONE")
+	private Integer APP_SERVICE_FEE_ONE;
+	
+	@Column(name="APP_SERVICE_FEE_TWO")
+	private Integer APP_SERVICE_FEE_TWO;
+	
+	@Column(name="APP_TOTAL_SERVICE_FEE")
+	private Integer APP_TOTAL_SERVICE_FEE;
+	
+	@Column(name="APP_TOTAL_FEE")
+	private Integer APP_TOTAL_FEE;
+	
+	@Column(name="MEDI_AGENCY_ID")
+	private Integer MEDI_AGENCY_ID;
+	
+	@Column(name="MEDI_AGENCY_CODE")
+	private String MEDI_AGENCY_CODE;
+	
+	@Column(name="APP_REGISTRATION_DATE")
+	private Date APP_REGISTRATION_DATE;
+	
+	@Column(name="APP_EMAIL")
+	private String APP_EMAIL;
+	
+	@Column(name="RECORD_STATUS")
+	private Integer RECORD_STATUS;
+	
+	@Column(name="APP_GENDER")
+	private String APP_GENDER;
+	
+	 @Column(name="APP_BLOOD_GROUP") 
+	 private String APP_BLOOD_GROUP;
+	 
+	 @Column(name="APP_HEIGHT")
+	 private String APP_HEIGHT;
+	 
+	 @Column(name="APP_WEIGHT")
+	 private String APP_WEIGHT;
+	 
+     @Column(name="PINCODE")
+     private String PINCODE;
+   
+   
+   //getters and setters
+	
+	
+	
+	
+	public String getAPP_BLOOD_GROUP() {
+	return APP_BLOOD_GROUP;
+}
+public String getPINCODE() {
+		return PINCODE;
+	}
+	public void setPINCODE(String pINCODE) {
+		PINCODE = pINCODE;
+	}
+public void setAPP_BLOOD_GROUP(String aPP_BLOOD_GROUP) {
+	APP_BLOOD_GROUP = aPP_BLOOD_GROUP;
+}
+public String getAPP_HEIGHT() {
+	return APP_HEIGHT;
+}
+public void setAPP_HEIGHT(String aPP_HEIGHT) {
+	APP_HEIGHT = aPP_HEIGHT;
+}
+public String getAPP_WEIGHT() {
+	return APP_WEIGHT;
+}
+public void setAPP_WEIGHT(String aPP_WEIGHT) {
+	APP_WEIGHT = aPP_WEIGHT;
+}
+	public String getAPP_GENDER() {
+		return APP_GENDER;
+	}
+	public void setAPP_GENDER(String aPP_GENDER) {
+		APP_GENDER = aPP_GENDER;
+	}
+	public String getAPP_FIRST_NAME() {
+		return APP_FIRST_NAME;
+	}
+	public Integer getRECORD_STATUS() {
+		return RECORD_STATUS;
+	}
+	public void setRECORD_STATUS(Integer rECORD_STATUS) {
+		RECORD_STATUS = rECORD_STATUS;
+	}
+	public void setAPP_FIRST_NAME(String aPP_FIRST_NAME) {
+		APP_FIRST_NAME = aPP_FIRST_NAME;
+	}
+	public String getAPP_MIDDLE_NAME() {
+		return APP_MIDDLE_NAME;
+	}
+	public void setAPP_MIDDLE_NAME(String aPP_MIDDLE_NAME) {
+		APP_MIDDLE_NAME = aPP_MIDDLE_NAME;
+	}
+	public String getAPP_SUR_NAME() {
+		return APP_SUR_NAME;
+	}
+	public void setAPP_SUR_NAME(String aPP_SUR_NAME) {
+		APP_SUR_NAME = aPP_SUR_NAME;
+	}
+	public String getAPP_FILE_NO() {
+		return APP_FILE_NO;
+	}
+	public void setAPP_FILE_NO(String aPP_FILE_NO) {
+		APP_FILE_NO = aPP_FILE_NO;
+	}
+	public String getAPP_ADDRESS_ONE() {
+		return APP_ADDRESS_ONE;
+	}
+	public void setAPP_ADDRESS_ONE(String aPP_ADDRESS_ONE) {
+		APP_ADDRESS_ONE = aPP_ADDRESS_ONE;
+	}
+	public String getAPP_ADDRESS_TWO() {
+		return APP_ADDRESS_TWO;
+	}
+	public void setAPP_ADDRESS_TWO(String aPP_ADDRESS_TWO) {
+		APP_ADDRESS_TWO = aPP_ADDRESS_TWO;
+	}
+	public String getAPP_ADDRESS_THREE() {
+		return APP_ADDRESS_THREE;
+	}
+	public void setAPP_ADDRESS_THREE(String aPP_ADDRESS_THREE) {
+		APP_ADDRESS_THREE = aPP_ADDRESS_THREE;
+	}
+	public String getREFERRED_BY() {
+		return REFERRED_BY;
+	}
+	public void setREFERRED_BY(String rEFERRED_BY) {
+		REFERRED_BY = rEFERRED_BY;
+	}
+	public Date getREFERRED_DATE() {
+		return REFERRED_DATE;
+	}
+	public void setREFERRED_DATE(Date rEFERRED_DATE) {
+		REFERRED_DATE = rEFERRED_DATE;
+	}
+	public String getREF_DOCTER_NAME() {
+		return REF_DOCTER_NAME;
+	}
+	public void setREF_DOCTER_NAME(String rEF_DOCTER_NAME) {
+		REF_DOCTER_NAME = rEF_DOCTER_NAME;
+	}
+	public String getREF_DOCTER_DEGREE() {
+		return REF_DOCTER_DEGREE;
+	}
+	public void setREF_DOCTER_DEGREE(String rEF_DOCTER_DEGREE) {
+		REF_DOCTER_DEGREE = rEF_DOCTER_DEGREE;
+	}
+	public String getREF_DOCTER_HOSPITAL_NAME() {
+		return REF_DOCTER_HOSPITAL_NAME;
+	}
+	public void setREF_DOCTER_HOSPITAL_NAME(String rEF_DOCTER_HOSPITAL_NAME) {
+		REF_DOCTER_HOSPITAL_NAME = rEF_DOCTER_HOSPITAL_NAME;
+	}
+	public String getAPP_MOBILE_NO() {
+		return APP_MOBILE_NO;
+	}
+	public void setAPP_MOBILE_NO(String aPP_MOBILE_NO) {
+		APP_MOBILE_NO = aPP_MOBILE_NO;
+	}
+	public String getAPP_FATHER_NAME() {
+		return APP_FATHER_NAME;
+	}
+	public void setAPP_FATHER_NAME(String aPP_FATHER_NAME) {
+		APP_FATHER_NAME = aPP_FATHER_NAME;
+	}
+	public String getAPP_MOTHER_NAME() {
+		return APP_MOTHER_NAME;
+	}
+	public void setAPP_MOTHER_NAME(String aPP_MOTHER_NAME) {
+		APP_MOTHER_NAME = aPP_MOTHER_NAME;
+	}
+	public Date getAPP_DOB() {
+		return APP_DOB;
+	}
+	public void setAPP_DOB(Date aPP_DOB) {
+		APP_DOB = aPP_DOB;
+	}
+	public String getREF_HOSPITAL_ADDRESS_ONE() {
+		return REF_HOSPITAL_ADDRESS_ONE;
+	}
+	public void setREF_HOSPITAL_ADDRESS_ONE(String rEF_HOSPITAL_ADDRESS_ONE) {
+		REF_HOSPITAL_ADDRESS_ONE = rEF_HOSPITAL_ADDRESS_ONE;
+	}
+	public String getREF_HOSPITAL_ADDRESS_TWO() {
+		return REF_HOSPITAL_ADDRESS_TWO;
+	}
+	public void setREF_HOSPITAL_ADDRESS_TWO(String rEF_HOSPITAL_ADDRESS_TWO) {
+		REF_HOSPITAL_ADDRESS_TWO = rEF_HOSPITAL_ADDRESS_TWO;
+	}
+	public String getREF_HOSPITAL_ADDRESS_THREE() {
+		return REF_HOSPITAL_ADDRESS_THREE;
+	}
+	public void setREF_HOSPITAL_ADDRESS_THREE(String rEF_HOSPITAL_ADDRESS_THREE) {
+		REF_HOSPITAL_ADDRESS_THREE = rEF_HOSPITAL_ADDRESS_THREE;
+	}
+	public String getREF_DOCTOR_EMP_ID() {
+		return REF_DOCTOR_EMP_ID;
+	}
+	public void setREF_DOCTOR_EMP_ID(String rEF_DOCTOR_EMP_ID) {
+		REF_DOCTOR_EMP_ID = rEF_DOCTOR_EMP_ID;
+	}
+	public String getREF_HOSPITAL_REGISTRATION_NO() {
+		return REF_HOSPITAL_REGISTRATION_NO;
+	}
+	public void setREF_HOSPITAL_REGISTRATION_NO(String rEF_HOSPITAL_REGISTRATION_NO) {
+		REF_HOSPITAL_REGISTRATION_NO = rEF_HOSPITAL_REGISTRATION_NO;
+	}
+	public String getAPP_EXISTS_DISEASE_ONE() {
+		return APP_EXISTS_DISEASE_ONE;
+	}
+	public void setAPP_EXISTS_DISEASE_ONE(String aPP_EXISTS_DISEASE_ONE) {
+		APP_EXISTS_DISEASE_ONE = aPP_EXISTS_DISEASE_ONE;
+	}
+	public String getAPP_EXISTS_DISEASE_TWO() {
+		return APP_EXISTS_DISEASE_TWO;
+	}
+	public void setAPP_EXISTS_DISEASE_TWO(String aPP_EXISTS_DISEASE_TWO) {
+		APP_EXISTS_DISEASE_TWO = aPP_EXISTS_DISEASE_TWO;
+	}
+	public String getAPP_EXISTS_DISEASE_THREE() {
+		return APP_EXISTS_DISEASE_THREE;
+	}
+	public void setAPP_EXISTS_DISEASE_THREE(String aPP_EXISTS_DISEASE_THREE) {
+		APP_EXISTS_DISEASE_THREE = aPP_EXISTS_DISEASE_THREE;
+	}
+	public String getAPP_EXISTS_DISEASE_FOUR() {
+		return APP_EXISTS_DISEASE_FOUR;
+	}
+	public void setAPP_EXISTS_DISEASE_FOUR(String aPP_EXISTS_DISEASE_FOUR) {
+		APP_EXISTS_DISEASE_FOUR = aPP_EXISTS_DISEASE_FOUR;
+	}
+	public String getAPP_EXISTS_DISEASE_FIVE() {
+		return APP_EXISTS_DISEASE_FIVE;
+	}
+	public void setAPP_EXISTS_DISEASE_FIVE(String aPP_EXISTS_DISEASE_FIVE) {
+		APP_EXISTS_DISEASE_FIVE = aPP_EXISTS_DISEASE_FIVE;
+	}
+	public String getAPP_MEDI_TEST_ID_ONE() {
+		return APP_MEDI_TEST_ID_ONE;
+	}
+	public void setAPP_MEDI_TEST_ID_ONE(String aPP_MEDI_TEST_ID_ONE) {
+		APP_MEDI_TEST_ID_ONE = aPP_MEDI_TEST_ID_ONE;
+	}
+	public String getAPP_GIVEN_SAMPLE_ID() {
+		return APP_GIVEN_SAMPLE_ID;
+	}
+	public void setAPP_GIVEN_SAMPLE_ID(String aPP_GIVEN_SAMPLE_ID) {
+		APP_GIVEN_SAMPLE_ID = aPP_GIVEN_SAMPLE_ID;
+	}
+	public String getAPP_MEDI_TEST_ID_TWO() {
+		return APP_MEDI_TEST_ID_TWO;
+	}
+	public void setAPP_MEDI_TEST_ID_TWO(String aPP_MEDI_TEST_ID_TWO) {
+		APP_MEDI_TEST_ID_TWO = aPP_MEDI_TEST_ID_TWO;
+	}
+	public String getAPP_MEDI_TEST_ID_THREE() {
+		return APP_MEDI_TEST_ID_THREE;
+	}
+	public void setAPP_MEDI_TEST_ID_THREE(String aPP_MEDI_TEST_ID_THREE) {
+		APP_MEDI_TEST_ID_THREE = aPP_MEDI_TEST_ID_THREE;
+	}
+	public String getAPP_MEDI_TEST_ID_FOUR() {
+		return APP_MEDI_TEST_ID_FOUR;
+	}
+	public void setAPP_MEDI_TEST_ID_FOUR(String aPP_MEDI_TEST_ID_FOUR) {
+		APP_MEDI_TEST_ID_FOUR = aPP_MEDI_TEST_ID_FOUR;
+	}
+	public String getAPP_MEDI_TEST_ID_FIVE() {
+		return APP_MEDI_TEST_ID_FIVE;
+	}
+	public void setAPP_MEDI_TEST_ID_FIVE(String aPP_MEDI_TEST_ID_FIVE) {
+		APP_MEDI_TEST_ID_FIVE = aPP_MEDI_TEST_ID_FIVE;
+	}
+	public String getAPP_PRESENT_ADDRESS_ONE() {
+		return APP_PRESENT_ADDRESS_ONE;
+	}
+	public void setAPP_PRESENT_ADDRESS_ONE(String aPP_PRESENT_ADDRESS_ONE) {
+		APP_PRESENT_ADDRESS_ONE = aPP_PRESENT_ADDRESS_ONE;
+	}
+	public String getAPP_PRESENT_ADDRESS_TWO() {
+		return APP_PRESENT_ADDRESS_TWO;
+	}
+	public void setAPP_PRESENT_ADDRESS_TWO(String aPP_PRESENT_ADDRESS_TWO) {
+		APP_PRESENT_ADDRESS_TWO = aPP_PRESENT_ADDRESS_TWO;
+	}
+	public String getAPP_PRESENT_ADDRESS_THREE() {
+		return APP_PRESENT_ADDRESS_THREE;
+	}
+	public void setAPP_PRESENT_ADDRESS_THREE(String aPP_PRESENT_ADDRESS_THREE) {
+		APP_PRESENT_ADDRESS_THREE = aPP_PRESENT_ADDRESS_THREE;
+	}
+	public String getCREATED_BY() {
+		return CREATED_BY;
+	}
+	public void setCREATED_BY(String cREATED_BY) {
+		CREATED_BY = cREATED_BY;
+	}
+	public Date getCREATED_DATE() {
+		return CREATED_DATE;
+	}
+	public void setCREATED_DATE(Date cREATED_DATE) {
+		CREATED_DATE = cREATED_DATE;
+	}
+	public String getCREATED_ON() {
+		return CREATED_ON;
+	}
+	public void setCREATED_ON(String cREATED_ON) {
+		CREATED_ON = cREATED_ON;
+	}
+	public String getCOUNTRY_ID() {
+		return COUNTRY_ID;
+	}
+	public void setCOUNTRY_ID(String cOUNTRY_ID) {
+		COUNTRY_ID = cOUNTRY_ID;
+	}
+	public Integer getAPP_SERVICE_ID_ONE() {
+		return APP_SERVICE_ID_ONE;
+	}
+	public void setAPP_SERVICE_ID_ONE(Integer aPP_SERVICE_ID_ONE) {
+		APP_SERVICE_ID_ONE = aPP_SERVICE_ID_ONE;
+	}
+	public Integer getAPP_SERVICE_ID_TWO() {
+		return APP_SERVICE_ID_TWO;
+	}
+	public void setAPP_SERVICE_ID_TWO(Integer aPP_SERVICE_ID_TWO) {
+		APP_SERVICE_ID_TWO = aPP_SERVICE_ID_TWO;
+	}
+	public Integer getAPP_SERVICE_FEE_ONE() {
+		return APP_SERVICE_FEE_ONE;
+	}
+	public void setAPP_SERVICE_FEE_ONE(Integer aPP_SERVICE_FEE_ONE) {
+		APP_SERVICE_FEE_ONE = aPP_SERVICE_FEE_ONE;
+	}
+	public Integer getAPP_SERVICE_FEE_TWO() {
+		return APP_SERVICE_FEE_TWO;
+	}
+	public void setAPP_SERVICE_FEE_TWO(Integer aPP_SERVICE_FEE_TWO) {
+		APP_SERVICE_FEE_TWO = aPP_SERVICE_FEE_TWO;
+	}
+	public Integer getAPP_TOTAL_SERVICE_FEE() {
+		return APP_TOTAL_SERVICE_FEE;
+	}
+	public void setAPP_TOTAL_SERVICE_FEE(Integer aPP_TOTAL_SERVICE_FEE) {
+		APP_TOTAL_SERVICE_FEE = aPP_TOTAL_SERVICE_FEE;
+	}
+	public Integer getAPP_TOTAL_FEE() {
+		return APP_TOTAL_FEE;
+	}
+	public void setAPP_TOTAL_FEE(Integer aPP_TOTAL_FEE) {
+		APP_TOTAL_FEE = aPP_TOTAL_FEE;
+	}
+	public Integer getMEDI_AGENCY_ID() {
+		return MEDI_AGENCY_ID;
+	}
+	public void setMEDI_AGENCY_ID(Integer mEDI_AGENCY_ID) {
+		MEDI_AGENCY_ID = mEDI_AGENCY_ID;
+	}
+	public String getMEDI_AGENCY_CODE() {
+		return MEDI_AGENCY_CODE;
+	}
+	public void setMEDI_AGENCY_CODE(String mEDI_AGENCY_CODE) {
+		MEDI_AGENCY_CODE = mEDI_AGENCY_CODE;
+	}
+	public Date getAPP_REGISTRATION_DATE() {
+		return APP_REGISTRATION_DATE;
+	}
+	public void setAPP_REGISTRATION_DATE(Date aPP_REGISTRATION_DATE) {
+		APP_REGISTRATION_DATE = aPP_REGISTRATION_DATE;
+	}
+	public String getAPP_EMAIL() {
+		return APP_EMAIL;
+	}
+	public void setAPP_EMAIL(String aPP_EMAIL) {
+		APP_EMAIL = aPP_EMAIL;
+	}
+	
+	
+
+}
