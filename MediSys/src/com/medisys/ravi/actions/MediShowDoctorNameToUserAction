@@ -1,0 +1,36 @@
+public class MediShowDoctorNameToUserAction extends ActionSupport implements SessionAware, ModelDriven<MediShowDoctorNameToUserBean>
+
+{
+//initializing the logger 
+
+private static final Logger logger=Logger.getLogger(MediShowDoctorNameToUserAction.class);
+//fields
+private Map<String, String> session;
+private MediShowDoctorNameToUserBean;
+private String s_flag;
+
+// getters and setters 
+
+
+
+
+
+
+//methods 
+
+
+public String execute(){
+
+
+return SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+}
