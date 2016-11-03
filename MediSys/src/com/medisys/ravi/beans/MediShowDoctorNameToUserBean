@@ -1,0 +1,29 @@
+
+public classs MediShowDoctorNameToUserBean{
+
+//fields
+private String doctor_name;
+private String doctor_mobile_no;
+private String doctor_qualification;
+private String doctor_hospital_name;
+private String doctor_email;
+private String doctor_website_name;
+
+
+
+
+// generate getters and setters 
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
