@@ -1,0 +1,16 @@
+
+public class MediShowDoctorNameToUserPojo implements Serializable{
+
+//fields 
+
+
+
+
+
+// getters and setters 
+
+
+
+
+
+}
