@@ -1,0 +1,42 @@
+public class MediShowDoctorNameToUserDao{
+
+
+// logger initialization
+private static final Logger logger =Logger.getLogger(MediShowDoctorNameToUserDao.class);
+
+
+
+
+// fields 
+
+private Session session;
+private Transaction tr;
+private Criteria criteria;
+
+
+
+///create a method here for persisting the data of the doctor which going to be shown to the user
+
+
+
+public int saveDoctor(){
+
+try{
+
+}catch(Exception e){
+logger.error("the exception in saving the doctor data is ...."+e);
+}
+finally{
+
+//close the session and transaction object here 
+
+
+}
+
+
+
+
+
+
+}
+}
