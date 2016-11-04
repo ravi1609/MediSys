@@ -1,0 +1,64 @@
+<@taglib uri="/struts-tags" prefix="s"/>
+<html>
+<head>
+<title>This is jsp page for adding the dcotor name </title>
+
+<script type="text/javascript" src="textvalidation.js">
+</script>
+</head>
+
+<body        >
+<div  class="controller">
+<div class="col-md-6">
+<s:textfield name="doctor_name" id="doctor_name" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkString(this.value);">
+</s:textfield>
+<div>
+<div class="col-md-6">
+<s:textfield name="doctor_qualification" id="doctor_qualification" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkAlphaNum(this.value);">
+</s:textfield>
+<div>
+<div class="col-md-6">
+<s:textfield name="doctor_mobile" id="doctor_mobile" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkPhone(this.value);">
+</s:textfield>
+<div>
+<div class="col-md-6">
+<s:select name="rcrd_status" id="rcrd_status" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" list="#{'0':'Active','1':'Deactive'/>
+<div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
