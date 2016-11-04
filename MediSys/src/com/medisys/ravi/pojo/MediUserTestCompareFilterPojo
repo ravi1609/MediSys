@@ -1,0 +1,45 @@
+ 
+ @Entity
+ @Audited
+ @Table(name="MEDI_TEST_COMPARE_FILTER_MSTR")
+ public class MediUserTestCompareFilterPojo implements Serializable
+ {
+ // fields 
+ @Id()
+ @GeneratedValue(stGenerationType.AUTO)
+ @Column(name="SRNO",nullable="false")
+ private Integer SRNO;
+ 
+ private String FILTER_NAME;
+ private String FILTER_DESCRIPTION;
+ private Integer RECORD_STATUS;
+ private Date CREATED_DATE;
+ private Date CREATED_TIME;
+ private String CREATED_BY;
+ private String CREATED_ON;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+
+
+
