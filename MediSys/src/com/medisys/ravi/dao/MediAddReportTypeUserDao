@@ -1,0 +1,71 @@
+
+public class MediAddReportTypeUserDao
+{
+
+// logger initialization 
+
+private static final Logger logger = Logger.getLogger(MediAddReportTypeUserDao.class);
+
+
+// fields
+private Session session;
+private Criteria criteria;
+
+
+
+
+
+// methods 
+
+
+public Integer getMaxTableId()
+{
+try{
+
+}
+catch(Exception e){
+
+logger.error("exception in fetching the max table id is.."+e.getMessage());
+}
+finally{
+
+try{
+session.close();
+}
+catch(Exception e){
+logger.error("error in closing the session ..."+e.getMessage());
+}
+}
+
+}
+
+
+
+public String saveOrUpdateReportUserType(MediAddReportTypeUserBean add_report_type_user_bean){
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
