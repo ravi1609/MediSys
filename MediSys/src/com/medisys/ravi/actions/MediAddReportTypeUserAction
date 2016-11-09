@@ -1,0 +1,25 @@
+public class MediAddReportTypeUserAction extends ActionSupport implements SessionAware,ModelDriven<MediAddReportTypeUserBean>
+{
+
+//  logger initialization 
+
+private static final Logger logger = Logger.getLogger(MediAddReportTypeUserAction.class);
+
+ //fields
+ private Map<String,Object> session;
+ private MediAddReportTypeUserBean report_type_user_bean;
+ private String u_message;
+ 
+ 
+ //constructor
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+}
