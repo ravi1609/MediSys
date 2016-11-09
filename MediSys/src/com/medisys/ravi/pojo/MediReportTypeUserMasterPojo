@@ -1,0 +1,68 @@
+
+
+
+
+
+@Entity
+@Table(name="MEDI_REPORT_TYPE_USER_MASTER")
+@Audited
+public class MediReportTypeUserMasterPojo implents Serilizable
+{
+
+// fields 
+@Id
+@Column(name="",nullable="",length=10)
+private Integer USER_ID;
+
+@Column(name="RECORD_STATUS",nullable="",length=10)
+private Integer RECORD_STATUS;
+
+@Column(name="USER_TYPE_NAME",nullable="",length=10)
+private String USER_TYPE_NAME;
+
+@Column(name="CREATED_ON",nullable="",length=10)
+private String CREATED_ON;
+
+@Column(name="CREATED_BY",nullable="",length=10)
+private String CREATED_BY;
+
+@Column(name="USER_TYPE_DESC",nullable="",length=10)
+private String USER_TYPE_DESC;
+
+
+
+
+@Basic
+@Optional()
+@Column(name="CREATED_DATE",nullable="",length=10) // user basic annotation here for the date and time
+private Date CREATED_DATE;
+
+@Column(name="CREATED_TIME",nullable="",length=10)
+private Date CREATED_TIME;
+
+@Column(name="DISPLAY_ORDER",nullable="",length=10)
+private Integer DISPLAY_ORDER;
+
+
+// mappings
+
+
+
+// getters and setters 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
