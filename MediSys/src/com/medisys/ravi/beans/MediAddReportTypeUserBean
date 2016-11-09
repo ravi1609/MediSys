@@ -12,6 +12,8 @@ private Date created_date;
 private Date created_time;
 private String report_user_type_desc;
 private Integer report_user_type_display_order;
+priavte String status;
+private Integer u_flag;
 
 // getters and setters 
 
