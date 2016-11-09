@@ -1,0 +1,30 @@
+public class MediAddReportTypeUserBean
+{
+
+// fields 
+
+private Integer report_user_type_id;
+private Integer rcrd_status;
+private String report_user_type_name;
+private String created_by;
+private String created_on;
+private Date created_date;
+private Date created_time;
+private String report_user_type_desc;
+private Integer report_user_type_display_order;
+
+// getters and setters 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
