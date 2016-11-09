@@ -13,7 +13,26 @@ private static final Logger logger = Logger.getLogger(MediAddReportTypeUserActio
  
  //constructor
  
+ public MediAddReportTypeUserAction()
+ {
+ report_type_user_bean= new MediAddReportTypeUserAction();
  
+ }
+ 
+ 
+ // getters and setters 
+ 
+ 
+ 
+ 
+ 
+ // methods
+ 
+ public String execute(){
+ 
+ 
+ return SUCCESS;
+ }
  
  
  
