@@ -26,49 +26,40 @@ function validateForm(){
            if( document.add_payment_mode_form.payment_mode_name.value=="")
 		      { //alert("bank name cant be  blank");
 		     // document.getElementById("errordiv").innerHTML="* Enter Value For Payment Mode Name....";
-		      showAlert("* Enter Value For Report Name....");
+		      showAlert("* Enter Value For Payment Mode Name.");
 		     // resetdatanotfounddiv();
 		   //  alert("here");
-		      document.add_payment_mode_form.report_name.focus();
+		      document.add_payment_mode_form.payment_mode_name.focus();
 		  //     alert("here");
-		      document.getElementById('report_name').style.backgroundColor = "#FFEEEE";
+		      document.getElementById('payment_mode_name').style.backgroundColor = "#FFEEEE";
 		//       alert("here");
 		      return false;
 		      }
-           if( document.add_report_name_form.report_xml_name.value=="")
+           if( document.add_payment_mode_form.payment_mode_desc.value=="")
 		      { //alert("bank name cant be  blank");
 		     // document.getElementById("errordiv").innerHTML="* Enter Value For Country Name....";
-		      showAlert("* Enter Value For Report Xml Name....");
+		      showAlert("* Enter Value For Mode Description....");
 		     // resetdatanotfounddiv();
 		   //  alert("here");
-		      document.add_report_name_form.report_xml_name.focus();
+		      document.add_payment_mode_form.payment_mode_desc.focus();
 		  //     alert("here");
-		      document.getElementById('report_xml_name').style.backgroundColor = "#FFEEEE";
+		      document.getElementById('payment_mode_desc').style.backgroundColor = "#FFEEEE";
 		//       alert("here");
 		      return false;
 		      }
       //alert("here");
-             if( document.add_report_name_form.report_desc.value=="")
+             if( document.add_payment_mode_form.display_order.value=="")
 		      {
 		      // alert("bank name cant be  blank");
 		      //document.getElementById("errordiv").innerHTML="* Enter Value Country Description....";
-		      showAlert("* Enter Value For Report Description....");
+		      showAlert("* Enter Value For Mode Display Order....");
 		     // resetdatanotfounddiv();
-		      document.add_report_name_form.report_desc.focus();
-		      document.getElementById('report_desc').style.backgroundColor = "#FFEEEE";
+		      document.add_payment_mode_form.display_order.focus();
+		      document.getElementById('display_order').style.backgroundColor = "#FFEEEE";
 		      return false;
 		      }
        //alert("here");
-          if( document.add_report_name_form.report_type_id.value=="-1")
-		      {
-		      // alert("bank name cant be  blank");
-		     // document.getElementById("errordiv").innerHTML="* Pls Select currency name...";
-		      showAlert("* Pls Select Report Type ...");
-		     // resetdatanotfounddiv();
-		      document.add_report_name_form.report_type_id.focus();
-		      document.getElementById('report_type_id').style.backgroundColor = "#FFEEEE";
-		      return false;
-		      }
+    
                var x = document.add_payment_mode_form.rcrd_status.selectedIndex;
                 var b=document.add_payment_mode_form.rcrd_status.options[x].value;
 				
@@ -77,7 +68,7 @@ function validateForm(){
 			//	alert("Activation cant be  blank");
 				// document.getElementById("errordiv").innerHTML="* Select Value For Activation Or Deactivation Option...";
 				 showAlert("* Select Value For Activation Or Deactivation Option...");
-				 document.add_report_name_form.rcrd_status.focus();
+				 document.add_payment_mode_form.rcrd_status.focus();
 				 document.getElementById('rcrd_status').style.backgroundColor = "#FFEEEE";
 				 return false;
 				} 
@@ -94,8 +85,8 @@ function validateForm(){
 				 return false;
 				} */
     //alert("here");
-				add_report_name_form.submit.disabled = true;
-				add_report_name_form.submit.value = "Please wait...";
+				add_payment_mode_form.submit.disabled = true;
+				add_payment_mode_form.submit.value = "Please wait...";
                   return true;   
 }
  function editdetails(payment_mode_id,payment_mode_name,payment_mode_desc, display_order,Rcrdstatus)
