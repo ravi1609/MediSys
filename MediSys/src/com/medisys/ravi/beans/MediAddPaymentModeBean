@@ -1,4 +1,4 @@
-public class MediAddPaymentModBean
+public class MediAddPaymentModeBean
 {
 // fields
 private Integer payment_mode_id;
