@@ -6,9 +6,17 @@ private static final Logger logger = Logger.getLogger(MediAddPaymentModeAction.c
 
 // fields
 
-private String message;
 private Map<String,Object> session; 
 private max_payment_mode_id;
+private String update_msg;
+private MediAddPaymentModeBean payment_mode_bean;
+private List<MediAddPaymentModeBean> payment_mode_list;
+
+//construtor
+
+public MediAddPaymentModeAction(){
+payment_mode_bean= new MediAddPaymentModeBean();
+}
 
 
 // getters and setters 
@@ -20,11 +28,12 @@ private max_payment_mode_id;
 
 public String execute(){
 
+    max_payment_mode_id=MediAddPaymentModeDao.getMaxTableId();
+		max_payment_mode_id=max_payment_mode_id+1;
+	//	agency_list=MediSysUtilityMethods.getActiveAgencyList();
+		payment_mode_list=MediAddPaymentModeDao.getDataForDisplay();	
+		return SUCCESS;
 
-
-
-
-return SUCCESS;
 }
 
 //methods for saving the payment mode data
@@ -32,16 +41,77 @@ return SUCCESS;
 
 public String saveOrUpdatePaymentMode()
 {
+	if(payment_mode_bean!=null){
+			
+		/*if(!Med.validateForm(state_bean))
+	      {
+		    return ERROR;
+	       }*/
+		String state_msg=MediAddPaymentModeDao.saveOrUdatePaymentMode(payment_mode_bean);
+		if(state_msg.equals("saved"))
+		{
+			//session.put("error", "User Type Details Saved Successfuly..");
+			update_msg="Payment Details Saved Successfuly..";
+			logger.info("Payment Details Saved Successfuly..");
+			return SUCCESS;
+		} if(state_msg.equals("updated"))
+		{
+			//session.put("error", "User Type Details Updated Successfuly..");
+			update_msg="Payment Details Updated Successfuly..";
+			logger.error("Payment Details Updated Successfuly..");
+			return SUCCESS;
+		}
+		 
+		 if(state_msg.equals("deleted"))
+			{
+				//session.put("error", "User Type Details Deleted Successfuly..");
+				update_msg="Payment Details Deleted Successfuly..";
+				logger.error("Payment Details Deleted Successfuly..");
+				return SUCCESS;
+			}
+		 if(state_msg.equals("error"))
+			{
+				//session.put("error", "User Type Details not updated.");
+				update_msg="Payment Details not updated.";
+				logger.error("Payment Details not updated...");
+				return SUCCESS;
+			}
+		return ERROR;
+		
+		
+	}
+
+	
+	else
+	{
+		//session.put("error", "Bean initialization failed..");
+		update_msg="Bean initialization failed..";
+		logger.error("Bean is setted to null...");
+		return ERROR;
+	}
+	
 
 
-
-
-return "message";
 
 }
 
 
+// bean injection
+	@Override
+	public MediAddPaymentModeBean getModel() {
+		// TODO Auto-generated method stub
+		return payment_mode_bean;
+	}
 
+	
+	
+	
+	// session injection
+	@Override
+	public void setSession(Map<String, Object> session) {
+		// TODO Auto-generated method stub
+	    this.session=session;	
+	}
 
 
 
