@@ -1,0 +1,18 @@
+public class MediAddPaymentModBean
+{
+// fields
+private Integer payment_mode_id;
+private String payment_mode_name;
+private String payment_mode_desc;
+private Integer rcrd_status;
+private String created_by;
+private String created_on;
+private Date created_date;
+private Date created_time;
+private String status;
+
+
+
+// getters and setters 
+
+}
