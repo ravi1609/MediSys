@@ -1,0 +1,30 @@
+public class MediAddPaymentModeAction extends ActionSupport implements SessionAware,ModelDriven<MediAddPaymentModeBean>
+{
+// logger initialization 
+
+private static final Logger logger = Logger.getLogger(MediAddPaymentModeAction.class);
+
+// fields
+
+private String message;
+private Map<String,Object> session; 
+private max_payment_mode_id;
+
+
+// getters and setters 
+
+
+
+// methods 
+
+
+public String execute(){
+
+
+
+
+
+return SUCCESS;
+}
+
+}
