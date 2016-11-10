@@ -152,7 +152,7 @@ import com.medisys.ravi.utility.IpAddress;
 		
 		
 		
-		public static String AddOrUpdateReport(MediAddPaymentModeBean add_user_report_bean){
+		public static String addOrUpdatePaymentModes(MediAddPaymentModeBean add_payment_mode_bean){
 			 String update_msg = null;
 				
 				try{
@@ -172,28 +172,34 @@ import com.medisys.ravi.utility.IpAddress;
 							}
 							//session.getTransaction().begin();
 							 
-						Criteria	criteria = session.createCriteria(MediUserReportsMasterPojo.class);
+						Criteria	criteria = session.createCriteria(AddPaymentModeMasterPojo.class);
 						
 							if(add_user_report_bean.getUflag().equals(0)){
 								//save
 								session.getTransaction().begin();
 								logger.info("transaction started saving data..");
 							
-								MediUserReportsMasterPojo add_user_report_pojo= new MediUserReportsMasterPojo();
+								AddPaymentModeMasterPojo add_payment_mode_pojo= new AddPaymentModeMasterPojo();
 								
 								
-								add_user_report_pojo.setCREATED_BY(created_by);
-								add_user_report_pojo.setCREATED_DATE(new Date());
-								add_user_report_pojo.setCREATED_ON(IpAddress.getIp());
-								add_user_report_pojo.setCREATED_TIME(new Date());
-								add_user_report_pojo.setRECORD_STATUS(add_user_report_bean.getRcrd_status());
-								add_user_report_pojo.setREPORT_DESCRIPTION(add_user_report_bean.getReport_desc());
-								add_user_report_pojo.setREPORT_ID(add_user_report_bean.getReport_id());
-								add_user_report_pojo.setREPORT_NAME(add_user_report_bean.getReport_name());
-								add_user_report_pojo.setREPORT_TYPE(add_user_report_bean.getReport_type_id());
-								add_user_report_pojo.setREPORT_XML_NAME(add_user_report_bean.getReport_xml_name());
 								
+								/*
+								add_payment_mode_bean
 								
+								add_payment_mode_pojo.setCREATED_BY(created_by);
+								add_payment_mode_pojo.setCREATED_DATE(new Date());
+								add_payment_mode_pojo.setCREATED_ON(IpAddress.getIp());
+								add_payment_mode_pojo.setCREATED_TIME(new Date());
+								add_payment_mode_pojo.setRECORD_STATUS(add_payment_mode_bean.getRcrd_status());
+								add_payment_mode_pojo.setREPORT_DESCRIPTION(add_payment_mode_bean.getReport_desc());
+								add_payment_mode_pojo.setREPORT_ID(add_payment_mode_bean.getReport_id());
+								add_payment_mode_pojo.setREPORT_NAME(add_payment_mode_bean.getReport_name());
+								add_payment_mode_pojo.setREPORT_TYPE(add_payment_mode_bean.getReport_type_id());
+								add_payment_mode_pojo.setREPORT_XML_NAME(add_payment_mode_bean.getReport_xml_name());
+								
+								this part has to be updated when commiting to the master repo
+								
+								*/ 
 						 
 								session.save(add_user_report_pojo);
 								session.getTransaction().commit();
@@ -208,34 +214,37 @@ import com.medisys.ravi.utility.IpAddress;
 							
 							
 							
-							if (add_user_report_bean.getUflag().equals(1)){
+							if (add_payment_mode_bean.getUflag().equals(1)){
 								//update
-			               	session.getTransaction().begin();
+			                        	session.getTransaction().begin();
 						    logger.info("transaction started updating data..");
 			               	
-			               	criteria.add(Restrictions.eq("REPORT_ID",add_user_report_bean.getReport_id()));
+					/*
+					this part has to be updated when commiting directly to the master repo
+					
+			               	criteria.add(Restrictions.eq("PAYMENT_MODE_ID",add_payment_mode_bean.getPayment_mode_id()));
 			               	
-			               	MediUserReportsMasterPojo add_user_report_pojo= new MediUserReportsMasterPojo();
+			               	AddPaymentModeMasterPojo add_payment_mode_pojo= new AddPaymentModeMasterPojo();
 			               	
-			               	add_user_report_pojo= (MediUserReportsMasterPojo)criteria.uniqueResult();
+			               	add_payment_mode_pojo= (AddPaymentModeMasterPojo)criteria.uniqueResult();
 			               	
-			               	add_user_report_pojo.setCREATED_BY(created_by);
-							add_user_report_pojo.setCREATED_DATE(new Date());
-							add_user_report_pojo.setCREATED_ON(IpAddress.getIp());
-							add_user_report_pojo.setCREATED_TIME(new Date());
-							add_user_report_pojo.setRECORD_STATUS(add_user_report_bean.getRcrd_status());
-							add_user_report_pojo.setREPORT_DESCRIPTION(add_user_report_bean.getReport_desc());
+			                        	add_payment_mode_pojo.setCREATED_BY(created_by);
+							add_payment_mode_pojo.setCREATED_DATE(new Date());
+							add_payment_mode_pojo.setCREATED_ON(IpAddress.getIp());
+							add_payment_mode_pojo.setCREATED_TIME(new Date());
+							add_payment_mode_pojo.setRECORD_STATUS(add_payment_mode_bean.getRcrd_status());
+							add_payment_mode_pojo.setREPORT_DESCRIPTION(add_payment_mode_bean.getReport_desc());
 						
-							add_user_report_pojo.setREPORT_NAME(add_user_report_bean.getReport_name());
-							add_user_report_pojo.setREPORT_TYPE(add_user_report_bean.getReport_type_id());
-							add_user_report_pojo.setREPORT_XML_NAME(add_user_report_bean.getReport_xml_name());
+							add_payment_mode_pojo.setREPORT_NAME(add_payment_mode_bean.getReport_name());
+							add_payment_mode_pojo.setREPORT_TYPE(add_payment_mode_bean.getReport_type_id());
+							add_payment_mode_pojo.setREPORT_XML_NAME(add_payment_mode_bean.getReport_xml_name());
 						
 
 
-			               	
+			               	*/
 							 
 			   		    
-			   		    session.update(add_user_report_pojo);
+			   		    session.update(add_payment_mode_pojo);
 			   		    session.getTransaction().commit();
 			   		    update_msg="updated";
 							logger.info("transaction commited...data updation successfull..");
@@ -281,22 +290,6 @@ import com.medisys.ravi.utility.IpAddress;
 				
 		}
 		
-		
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
 
 
 }
