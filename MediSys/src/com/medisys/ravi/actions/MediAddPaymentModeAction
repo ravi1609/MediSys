@@ -27,4 +27,26 @@ public String execute(){
 return SUCCESS;
 }
 
+//methods for saving the payment mode data
+
+
+public String saveOrUpdatePaymentMode()
+{
+
+
+
+
+return "message";
+
+}
+
+
+
+
+
+
+
+
+
+
 }
