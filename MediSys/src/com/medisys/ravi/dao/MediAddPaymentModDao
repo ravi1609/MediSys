@@ -1,0 +1,30 @@
+
+public class MediAddPaymentModDao{
+
+// logger 
+
+private Logger logger =Logger.getLogger(MediAddPaymentModDao.class);
+
+
+// fields 
+
+private Session session;
+private Transaction tr;
+
+
+
+// getters and setters
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
