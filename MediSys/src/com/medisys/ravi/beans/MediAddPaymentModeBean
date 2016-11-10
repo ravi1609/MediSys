@@ -10,7 +10,7 @@ private String created_on;
 private Date created_date;
 private Date created_time;
 private String status;
-
+private Integer display_order;
 
 
 // getters and setters 
