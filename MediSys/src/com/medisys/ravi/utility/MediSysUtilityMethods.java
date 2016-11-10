@@ -2537,6 +2537,53 @@ public class MediSysUtilityMethods {
 							return getSampleList;
 							
 						}
-		 		 		
-		 	 		
+		 		 
+// this is the method writen for the fetching the payment modes as on 10-11-2016
+	
+		 		
+					
+					
+					
+	 				
+						public static HashMap<Integer,String> fetchPaymentModes(){
+							HashMap<Integer,String> getPaymentModesList=null;
+							
+							try{
+								getPaymentModesList=new HashMap<Integer,String>();
+								
+								 if (session == null || session.isOpen() == false) 
+							  		{
+							  			session = HibernateSessionFactoryProvider.getSessionFactory().openSession();
+							  			} 
+							  			
+							  				session.getTransaction().begin();
+								
+							  				Criteria criteria = session.createCriteria(AddPaymentModeMasterPojo.class);
+							  				criteria.add(Restrictions.eq("RECORD_STATUS",0));
+							  				ProjectionList prj = Projections.projectionList();
+							  				prj.add(Projections.property("PAYMENT_MODE_ID")).add(Projections.property("PAYMENT_MODE_NAME"));
+							  				criteria.setProjection(prj).addOrder(Order.asc("PAYMENT_MODE_NAME"));		
+							  				List<Object[]> MsnList=(List<Object[]>)criteria.list();
+							  				for(Object[] obj:MsnList){
+							  					getSampleList.put((Integer)obj[0], (String)obj[1]);
+							  				}
+							  				
+							}catch(Exception e){
+								logger.error("error in fetching the report name  .."+e);
+								getPaymentModesList=new HashMap<Integer,String>();
+							}
+							finally{
+								try{			
+									session.close();
+									logger.info("session closed.. fetching the payment mode name .");
+								}catch(Exception e){
+									logger.error(e.getMessage());
+								}
+							}
+							
+							return getPaymentModesList;
+							
+						}
+	
+	
 }
