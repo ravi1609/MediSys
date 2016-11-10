@@ -1,0 +1,44 @@
+@Entity
+@Table(name="MEDI_PAYMENT_MODE_MASTER")
+@Audited
+public class AddPaymentModeMasterPojo implements Serializable
+{
+//fields
+@Id
+@Column(name="PAYMENT_MODE_ID",nullable="false")
+private Integer PAYMENT_MODE_ID;
+
+@Column(name="PAYMENT_MODE_NAME",nullable="false")
+private String PAYMENT_MODE_NAME;
+
+@Column(name="PAYMENT_MODE_DESCRIPTION",nullable="true")
+private String PAYMENT_MODE_DESCRIPTION;
+
+@Column(name="MODE_DISPLAY_ORDER",nullable="false")
+private Integer MODE_DISPLAY_ORDER;
+
+@Column(name="RECORD_STATUS",nullable="false")
+private Integer RECORD_STATUS;
+
+@Column(name="CREATED_DATE",nullable="false")
+private Date CREATED_DATE;
+
+@Column(name="CREATED_ON",nullable="false")
+private String CREATED_ON;
+
+@Column(name="CREATED_BY",nullable="false")
+private String CREATED_BY;
+
+@Column(name="CREATED_TIME",nullable="false")
+private Date CREATED_TIME;
+
+// getters and setters 
+
+
+
+
+// mapping
+
+
+
+}
