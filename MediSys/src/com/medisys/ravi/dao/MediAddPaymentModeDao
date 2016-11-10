@@ -1,9 +1,9 @@
 
-public class MediAddPaymentModDao{
+public class MediAddPaymentModeDao{
 
 // logger 
 
-private Logger logger =Logger.getLogger(MediAddPaymentModDao.class);
+private Logger logger =Logger.getLogger(MediAddPaymentModeDao.class);
 
 
 // fields 
