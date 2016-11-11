@@ -1,0 +1,19 @@
+public class MediShowUserAccessLogBean
+{
+// fields
+private String created_on;
+private Date created_date;
+private Date created_time;
+private Integer serial_no;
+
+
+// getters and setters 
+
+
+
+
+
+
+
+
+}
