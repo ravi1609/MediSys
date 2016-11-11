@@ -1,0 +1,41 @@
+
+public class MediShowUserAccessLogAction extends ActionSupport implements SessionAware,ModelDriven<MediShowUserAccessLogBean>
+{
+
+// logger initialization
+private static final Logger logger=Logger.getLogger(MediShowUserAccessLogAction.class);
+
+//fields
+private Map<String,Object> session;
+private String umessage;
+private MediShowUserAccessLogBean user_log_bean;
+
+// getters and setters 
+
+
+
+// methods 
+
+public String execute(){
+
+return SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
