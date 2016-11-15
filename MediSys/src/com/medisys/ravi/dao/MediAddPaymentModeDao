@@ -24,7 +24,7 @@ import com.medisys.ravi.utility.HibernateSessionFactoryProvider;
 import com.medisys.ravi.utility.IpAddress;
 
 
-
+public class MediAddPaymentModeDao{
 
 	// logger initialization
 	
