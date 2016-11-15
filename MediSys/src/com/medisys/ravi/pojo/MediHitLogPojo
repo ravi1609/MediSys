@@ -1,0 +1,103 @@
+package com.medisys.ravi.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.envers.Audited;
+
+@Entity
+@Table(name="MEDI_HIT_LOG")
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="MEDI_HIT_LOG")
+@Audited
+public class MediHitLogPojo  implements Serializable {
+
+	/**
+	 * @author abhinav 
+	 */
+	private static final long serialVersionUID = -2448082355391792267L;
+	
+	//Fields
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="S_NO",nullable=false)
+	private Integer S_NO;
+	
+	@Column(name="REQ_IP",nullable=false,length=40)
+	private String REQ_IP;
+	
+	@Basic
+	@Temporal(TemporalType.DATE)
+	@Column(name="REQ_DATE",nullable=false)
+	private Date REQ_DATE;
+	
+	@Basic
+	@Temporal(TemporalType.DATE)
+	@Column(name="INSERTED_DATE",nullable=false)
+	private Date INSERTED_DATE;
+	
+	@Basic
+	@Temporal(TemporalType.TIME)
+	@Column(name="INSERTED_TIME",nullable=false)
+	private Date INSERTED_TIME;
+	
+	//Getters And Setters
+
+	public Integer getS_NO() {
+		return S_NO;
+	}
+
+	public void setS_NO(Integer s_NO) {
+		S_NO = s_NO;
+	}
+
+	public String getREQ_IP() {
+		return REQ_IP;
+	}
+
+	public void setREQ_IP(String rEQ_IP) {
+		REQ_IP = rEQ_IP;
+	}
+
+	public Date getREQ_DATE() {
+		return REQ_DATE;
+	}
+
+	public void setREQ_DATE(Date rEQ_DATE) {
+		REQ_DATE = rEQ_DATE;
+	}
+
+	public Date getINSERTED_DATE() {
+		return INSERTED_DATE;
+	}
+
+	public void setINSERTED_DATE(Date iNSERTED_DATE) {
+		INSERTED_DATE = iNSERTED_DATE;
+	}
+
+	public Date getINSERTED_TIME() {
+		return INSERTED_TIME;
+	}
+
+	public void setINSERTED_TIME(Date iNSERTED_TIME) {
+		INSERTED_TIME = iNSERTED_TIME;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+
+}
