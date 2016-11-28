@@ -1,0 +1,52 @@
+public class GatewayResponseController extends ActionSupport implements SessionAware,ModelDriven<GatewayResponseBean>
+{
+
+// logger initialization 
+
+private static final Logger logger =Logger.getLogger(GatewayResponseController.class);
+
+// fields 
+private Map<String,Object> session;
+private GatewayResponseBean gateway_response_bean;
+private String update_msg;
+
+
+
+
+
+
+
+
+// constructor 
+
+
+public GatewayResponseController(){
+gateway_response_bean= new GatewayResponseBean();
+}
+
+
+// getters and setters 
+
+// methods
+
+public String execute(){
+return SUCCESS;
+}
+
+
+public String processGatewayResponse(){
+
+
+
+return update_msg;
+}
+
+
+
+
+}
+
+
+
+
+
