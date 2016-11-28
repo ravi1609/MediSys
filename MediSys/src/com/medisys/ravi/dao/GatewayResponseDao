@@ -1,0 +1,16 @@
+public class GatewayResponseDao
+{
+
+//logger initialization 
+private static final Logger logger = Logger.getLogger(GatewayResponseDao.class);
+
+//fields
+
+
+//  methods 
+
+
+
+
+
+}
