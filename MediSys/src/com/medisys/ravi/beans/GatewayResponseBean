@@ -1,0 +1,76 @@
+public class GatewayResponseBean
+{
+// fields
+
+/*'CC' for credit-card / ‘DC’ for Debit Card / 'NB' for net-banking
+String value. Limit 2 characters.*/
+
+private String mode;
+
+// this is for the failure or success of the transcation success/failure success/failure. String value. Limit 7 characters.
+private String status;
+
+/*Merchant key provided by PayUMoney. Alphanumeric string
+value. Limit 5-9 characters.*/
+
+private String key;
+
+
+//Merchant Transaction ID. String value. Limit 30 characters
+private String txnid;
+//Original amount send by merchant. String value. Limit 30 
+
+private Double amount;
+private String productinfo;
+private String firstname;
+private String lastname;
+private String address1;
+private String address2;
+private String city;
+private String state;
+private String country;
+private String zipcode;
+private String email;
+private String phone;
+private String udf1;
+private String udf2;
+private String udf3;
+private String udf4;
+private String udf5;
+
+//Hash must be verified before confirmation of transaction. String
+//value. Limit- Fixed 128 everytime
+
+private String hash;
+
+/*If transaction failed, then reason of failure (Refer to APPENDIX at
+the end of the document). String value. Limit 4 characters.*/
+
+private String Error;
+/*Payment gateway type used in transaction. String value. Limit 10
+characters.*/
+
+private String PG_TYPE;
+
+/*Reference number for the payment gateway (received in
+PG_TYPE). String value. Limit 20 characters.*/
+
+private String bank_ref_num;
+
+/*Unique payment ID. String value. Incremental value. Generally 8
+characters. To be used as the reference number and for mapping
+with the txnid generated at your end.*/
+
+
+private String payuMoneyId;
+
+/*This is an optional return param that will be posted from our end
+if your PayUMoney account is on convenience fee model.*/
+private Double additionalCharges;
+
+
+// getters and setters
+
+
+
+}
