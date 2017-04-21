@@ -1,0 +1,77 @@
+@Entity
+@Table(name="MEDI_REFER_PATIENT_TO_LAB")
+@Audited
+public class MediReferPatienttoLabPojo implements Serializable
+
+{
+
+// fields 
+@Id
+@Column(name="ID", nullable="false")
+private String ID;
+
+@Column(name="DOCTOR_NAME", nullable="false")
+private String DOCTOR_NAME;
+@Column(name="patient_name" ,nullable="false")
+private String pateint_name;
+@Column(name="patient_surname", nullable="false")
+private String patient_surname;
+@Column(name="patient_dieases_name",nullable="false")
+private String patient_dieases_name;
+
+
+
+
+@Column(name="pateint_deiases_desc", nullable="false")
+private String patient_dieases_desc;
+private String patient_ref_test_name
+
+
+@Column(name="created_by", nullable="false")
+private String created_by;
+
+@Column(name="created_on", nullable="false")
+private String created_on;
+
+
+@Basic
+@Temporal(TemporalType.TIME)
+@Column(name="created_time")
+private Date created_time;
+
+@Basic
+@Temporal(TemporalType.DATE)
+@Column(name="created_date", nullable="false")
+private Date created_date;
+
+
+@Column(name="record_status", nullable="false")
+private Integer record_status;
+
+
+
+// gettes and setters
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
