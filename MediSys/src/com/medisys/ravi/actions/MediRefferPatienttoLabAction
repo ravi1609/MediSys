@@ -1,0 +1,47 @@
+public class MediRefferPatienttoLabAction extends ActionSupport implements SessionAware,ModelDriven<MediRefferPatienttoLabBean> {
+
+// fields 
+
+private MediRefferPatienttoLabBean ref_patient_to_lab_bean;
+private String message;
+
+
+
+// constructor
+
+public MediRefferPatienttoLabAction(){
+ref_patient_to_lab_bean= new MediRefferPatienttoLabBean();
+
+}
+
+// getters and setters 
+
+
+
+// overrided methods 
+
+
+
+
+
+
+
+// methods 
+
+
+public String execute(){
+
+
+return SUCCESS:
+}
+
+
+
+
+
+}
+
+
+
+
+
