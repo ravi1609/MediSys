@@ -1,0 +1,38 @@
+public class MediRefferPatienttoLabBean{
+
+// fields 
+
+
+
+private String patient_name;
+private String patient_suname;
+private String patient_dieases_name;
+private String patient_dieases_description;
+private String patient_test_name_ref_for;
+private Inetger patient_height;
+private Integer patient_weight;
+private String patient_gender;
+private String created_on;
+private String created_by;
+private Date created_date;
+private Date created_time;
+private String lab_id;
+
+
+
+// getters and setters 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
