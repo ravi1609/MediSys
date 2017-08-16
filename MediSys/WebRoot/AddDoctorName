@@ -7,23 +7,49 @@
 </script>
 </head>
 
-<body        >
+<body>
 <div  class="controller">
 <div class="col-md-6">
-<s:textfield name="doctor_name" id="doctor_name" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkString(this.value);">
+<s:textfield name="doctor_first_name" id="doctor_first_name" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkString(this.value);">
 </s:textfield>
 <div>
+
 <div class="col-md-6">
-<s:textfield name="doctor_qualification" id="doctor_qualification" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkAlphaNum(this.value);">
+<s:textfield name="doctor_middle_name" id="doctor_middle_name" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkString(this.value);">
 </s:textfield>
 <div>
+
+<div class="col-md-6">
+<s:textfield name="doctor_last_name" id="doctor_last_name" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkString(this.value);">
+</s:textfield>
+<div>
+
+
+<div class="col-md-6">
+<s:textfield name="doctor_email" id="doctor_email" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkEmail(this.value);">
+</s:textfield>
+<div>
+
+
+
 <div class="col-md-6">
 <s:textfield name="doctor_mobile" id="doctor_mobile" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" onblur="chkPhone(this.value);">
 </s:textfield>
 <div>
+
 <div class="col-md-6">
-<s:select name="rcrd_status" id="rcrd_status" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" list="#{'0':'Active','1':'Deactive'/>
+<s:textfield name="doctor_dob" id="doctor_dob" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;">
+</s:textfield>
 <div>
+
+
+<div class="col-md-6">
+<s:select name="doctor_gender" id="doctor_gender" style="margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;" ">
+</s:textfield>
+<div>
+
+
+
 
 </div>
 
