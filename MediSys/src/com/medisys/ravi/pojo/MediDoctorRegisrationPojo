@@ -1,1 +1,47 @@
 
+@Entity
+@Table(name="MEDI_DOC_REG_MASTER")
+@Audited
+public class MediDoctorRegisrationPojo implements Serializable
+
+{
+
+// fields 
+@Id
+@Column(name="USERNAME", nullable="false")
+private String USERNAME;
+
+
+private String doctor_first_name;
+private String doctor_middle_name;
+private String doctor_last_name;
+private String doctor_email;
+private Date doctor_dob;
+private Integer doctor_gender;
+
+
+
+// getters and setters
+
+
+
+/*
+after registration success show page for the password change the first password is sent to the user on email
+after changing password user is redirected to the doctor dashboard page
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
