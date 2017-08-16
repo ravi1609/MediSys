@@ -5,7 +5,7 @@ public class MediRefferPatienttoLabBean{
 
 
 private String patient_name;
-private String patient_suname;
+private String patient_surname;
 private String patient_dieases_name;
 private String patient_dieases_description;
 private String patient_test_name_ref_for;
