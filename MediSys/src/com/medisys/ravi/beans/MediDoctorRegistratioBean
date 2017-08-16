@@ -1,0 +1,32 @@
+
+public class MediDoctorRegistratioBean {
+
+
+
+//fields
+private String doctor_first_name;
+private String doctor_middle_name;
+private String doctor_last_name;
+private String doctor_email;
+private String doctor_mobile;
+private Integer doctor_gender;
+
+
+
+
+// getters and setters 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
