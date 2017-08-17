@@ -1,0 +1,29 @@
+
+
+
+public class MediDoctorRegistrationAction extends ActionSupport impelements SessionAware,ModelDriven<MediDoctorRegistratioBean>
+{
+
+// implements session aware interface incude its methods details
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
