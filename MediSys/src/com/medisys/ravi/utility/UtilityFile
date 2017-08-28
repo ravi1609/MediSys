@@ -1,0 +1,8 @@
+
+
+new singapore rds service details
+connection string ------> mdsys.cgcpjtwxxtgu.ap-southeast-1.rds.amazonaws.com:1521
+username and password are same as previous one
+MEDI_PAY_GATEWAY_MASTER
+replace failure url , succes url and cancel url ip wid 13.228.225.205
+i.e. 52.221.252.135===should be changed by====>>>>>>>>>>>13.228.225.205 
