@@ -1,0 +1,41 @@
+
+public class MediDoctorRegistartionDao{
+
+// generate serial version id here 
+
+// logger initialization
+private static final Logger logger=Logger.getLogger(MediDoctorRegistartionDao.class);
+private static Session session; //hibernate session declared here
+private static Criteria criteria; 
+public String processDoctorRegistration(){
+
+try{
+// get here hibernate session 
+
+
+}catch(Exception e){
+
+logger.error("exception in saving the details...in processDoctorRegistration"+e.getMessage());
+
+}finally{
+
+
+}
+
+
+
+}
+
+
+// write method for the doctor dashboard here
+
+
+
+
+}
+
+
+
+
+
+
