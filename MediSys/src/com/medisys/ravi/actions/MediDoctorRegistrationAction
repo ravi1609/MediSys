@@ -3,13 +3,65 @@
 
 public class MediDoctorRegistrationAction extends ActionSupport impelements SessionAware,ModelDriven<MediDoctorRegistratioBean>
 {
+// generate a serial version id
+// implements session aware interface include its methods details
 
-// implements session aware interface incude its methods details
+// logger initialization
+private static final Logger logger= Logger.getLogger(MediDoctorRegistrationAction.class);
+
+
+
+
+// fields
+private Map<String,Object> session;
+private MediDoctorRegistratioBean doctor_registration_bean;
+
+//constructor
+public MediDoctorRegistrationAction(){
+this.doctor_registration_bean= new MediDoctorRegistratioBean();
+}
+
+// getters and setters
 
 
 
 
 
+// methods 
+
+
+public String execute(){
+
+
+if(doctor_registration_bean=!null){
+logger.info("Starting the doctor registration ...");
+String smsg=MediDoctorRegistrationDao.processDoctorRegistration(doctor_registration_bean);
+if(smsg=="condition for success and error"){
+// send sms and email and process for the otp auth window
+session.put(username,username_email);
+session.put(user_type,usertype);
+logger.info("doctor registration sucessfull...");
+}
+else{
+session.put(error,"login failed");
+logger.info("");
+}
+}
+else{
+
+session.put(emsg,"pls try again...");
+}
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
